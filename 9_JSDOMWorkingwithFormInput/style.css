@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin-bottom: 0.7rem;
+}
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.Form_Ex{
+    text-align: center;
+    padding: 1.2rem;
+    width: 500px;
+    background: rgba(133, 108, 173, 0.24);
+}
+
+.btn{ 
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    border: none;
+    width: 10rem;
+    padding: 0.5rem;
+    background: none;
+    border-radius: 1.5rem;
+    border:1px solid rgba(133, 108, 173, 0.24);
+}
+.btn:hover{
+    border: 1px solid rgb(255, 255, 255);
+    transition: 1s;
+    background: rgba(192, 255, 224, 0);
+    cursor: pointer;
+}
+
+input{
+        background: transparent;
+        border: 1px solid rgba(133, 108, 173, 0.24);
+        border-radius: 5px;
+        padding: 5px;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }

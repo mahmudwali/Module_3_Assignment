@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15.AJAX POST Request Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="AJAX_Post">
+    <h1>AJAX POST Request Example</h1>
+    <button class="btn" onclick="sendPostRequest()">Send POST Request</button>
+  </div>
+</div>  
+
+
+
+
+
+<script>
+  function sendPostRequest() {
+    var url = 'https://api.example.com/submit';
+    var data = {
+      name: 'John Doe',
+      email: 'johndoe@example.com'
+    };
+    var jsonData = JSON.stringify(data);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          console.log(response);
+        } else {
+          console.log('Request failed with status:', xhr.status);
+        }
+      }
+    };
+
+    xhr.send(jsonData);
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  
+</head>
+<body>
+
+</body>
+</html>

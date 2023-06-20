@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.Change Image Source</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="changeImage">
+            <img id="myImage" src="img/1.png" alt="Initial Image">
+            <br>
+            <button class="btn" onclick="changeImageSource()">Change Image</button>        
+        </div>
+    </div>
+
+
+   
+    <script>
+        function changeImageSource() {
+            var image = document.getElementById("myImage");
+            image.src = "./img/2.png";
+        }
+    </script>
+
+
+
+</body>
+</html>

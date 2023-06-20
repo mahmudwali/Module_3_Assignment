@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.Browser Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container">
+  <div class="BDetect">
+    <h1>Browser Detection</h1>
+    <button class="btn" onclick="displayBrowserInfo()">Detect Browser</button>
+    <div id="browserInfo"></div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+  <script>
+    function detectBrowser() {
+      var browserName = navigator.appName;
+      var browserVersion = navigator.appVersion;
+
+      // Check for Chrome
+      if (navigator.userAgent.indexOf("Chrome") != -1) {
+        browserName = "Chrome";
+        browserVersion = navigator.userAgent.substring(navigator.userAgent.indexOf("Chrome") + 7);
+      }
+      // Check for Firefox
+      else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        browserName = "Firefox";
+        browserVersion = navigator.userAgent.substring(navigator.userAgent.indexOf("Firefox") + 8);
+      }
+      // Check for Edge
+      else if (navigator.userAgent.indexOf("Edge") != -1) {
+        browserName = "Edge";
+        browserVersion = navigator.userAgent.substring(navigator.userAgent.indexOf("Edge") + 5);
+      }
+      // Check for Safari
+      else if (navigator.userAgent.indexOf("Safari") != -1) {
+        browserName = "Safari";
+        browserVersion = navigator.userAgent.substring(navigator.userAgent.indexOf("Safari") + 7);
+      }
+      // Check for Opera
+      else if (navigator.userAgent.indexOf("Opera") != -1) {
+        browserName = "Opera";
+        browserVersion = navigator.userAgent.substring(navigator.userAgent.indexOf("Opera") + 6);
+      }
+
+      return {
+        name: browserName,
+        version: browserVersion
+      };
+    }
+
+    function displayBrowserInfo() {
+      var browserInfo = detectBrowser();
+      var browserInfoElement = document.getElementById("browserInfo");
+
+      browserInfoElement.innerHTML = "Browser Name: " + browserInfo.name + "<br>" +
+        "Browser Version: " + browserInfo.version;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+
+</head>
+<body>
+
+</body>
+</html>

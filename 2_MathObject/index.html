@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.Square Root of Sum of Squares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="sqrt">
+      <h1>Square Root of Sum of Squares</h1>
+  
+      <label for="numbers">Enter comma-separated numbers:</label>
+      <input type="text" id="numbers" />
+    
+      <button class="btn" onclick="displayResult()">Calculate</button>
+    
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    function calculateSquareRoot(arr) {
+      let sumOfSquares = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        sumOfSquares += Math.pow(arr[i], 2);
+      }
+
+      const squareRoot = Math.sqrt(sumOfSquares);
+      return squareRoot;
+    }
+
+    function displayResult() {
+      const numbersInput = document.getElementById('numbers');
+      const resultOutput = document.getElementById('result');
+
+      const numbers = numbersInput.value.split(',').map(Number);
+      const result = calculateSquareRoot(numbers);
+
+      resultOutput.textContent = `Square root of the sum of squares: ${result}`;
+    }
+  </script>
+</body>
+</html>
+
+
+

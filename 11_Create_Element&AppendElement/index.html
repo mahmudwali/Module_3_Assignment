@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11.Dynamically Create List Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="DynamicList">
+
+        <ul id="myList"></ul>
+
+    </div>
+  </div>
+  <script>
+    function createListItems() {
+      var myList = document.getElementById("myList");
+
+      for (var i = 1; i <= 5; i++) {
+        var listItem = document.createElement("li");
+        listItem.textContent = "Item " + i;
+        myList.appendChild(listItem);
+      }
+    }
+
+    // Call the function to create the list items
+    createListItems();
+  </script>
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamically Create List Items</title>
+</head>
+<body>
+
+</body>
+</html>

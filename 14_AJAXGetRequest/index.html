@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14.AJAX GET Request Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container">
+  <div class="AJAX_Get">
+    <h1>AJAX GET Request Example</h1>
+    <button class="btn" onclick="sendGetRequest()">Send GET Request</button>
+    <div id="result"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <script>
+    function sendGetRequest() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://api.example.com/data', true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            // Update HTML element with the response data
+            document.getElementById('result').innerHTML = response.message;
+          } else {
+            console.log('Error: ' + xhr.status);
+          }
+        }
+      };
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
+

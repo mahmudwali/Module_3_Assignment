@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13.Paragraphs Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container">
+  <div class="Paragraph_Ex">
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <p>This is a regular paragraph.</p>
+    <p class="highlight">This is another highlighted paragraph.</p>
+  
+  </div>
+</div>
+
+
+
+<script>
+  function changeTextColor(className) {
+    const paragraphs = document.querySelectorAll(`p.${className}`);
+
+    paragraphs.forEach((paragraph) => {
+      paragraph.style.color = 'red';
+    });
+  }
+
+  // Example usage:
+  changeTextColor('highlight');
+</script>
+</body>
+</html>
